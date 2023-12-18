@@ -1,7 +1,5 @@
 package tests;
 
-import api.Autorization;
-import api.Book;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import helpers.Attach;
@@ -11,18 +9,13 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import page.ProfilePage;
 
 import java.util.Map;
 
-import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.WebDriverRunner.closeWebDriver;
 
 public class TestBase {
 
-    public Autorization autorization = new Autorization();
-    public Book book = new Book();
-    public ProfilePage profile = new ProfilePage();
     @BeforeAll
     static void beforeAll() {
         RestAssured.baseURI = "https://demoqa.com";
